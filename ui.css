@@ -1,0 +1,24 @@
+/* 
+    SUMMARY OF REFACTOR:
+    The contents of this file have been split into modular files to improve manageability.
+    
+    - ui-base.css: Core containers, utility classes (.hidden), animations, and generic buttons.
+    - ui-hud.css: In-game HUD elements (difficulty indicator, score, level, audio toggles).
+    - ui-menu.css: Start/GameOver menus, difficulty selectors, VS lobby preview.
+    - ui-vs.css: VS Mode specific HUD (hearts, opponent view).
+    - ui-about.css: About overlay styling.
+    
+    This file remains empty or for future high-level overrides.
+*/
+
+/* removed #ui-container {} - moved to ui-base.css */
+/* removed #difficulty-indicator {} - moved to ui-hud.css */
+/* removed .difficulty-selector {} - moved to ui-menu.css */
+/* removed .vs-menu-wrapper {} - moved to ui-menu.css */
+/* removed #player-hearts-container {} - moved to ui-vs.css */
+/* removed #score-display {} - moved to ui-hud.css */
+/* removed #game-over-menu {} - moved to ui-menu.css */
+/* removed button {} - moved to ui-base.css */
+/* removed #replay-container {} - moved to ui-base.css */
+/* removed #music-toggle-btn {} - moved to ui-hud.css */
+/* removed #about-view {} - moved to ui-about.css */

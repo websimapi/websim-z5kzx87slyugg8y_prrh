@@ -1,0 +1,154 @@
+/* VS Mode In-Game UI */
+#player-hearts-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0px;
+}
+
+#opponent-view {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.opponent-info {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.opponent-identity {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 2px;
+}
+
+.vs-pfp {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #fff;
+}
+
+#opponent-name {
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.vs-score-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    margin-top: -2px;
+}
+
+.opponent-canvas-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    align-self: flex-start;
+}
+
+#opponent-canvas {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+#opponent-level {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    text-shadow: 0 0 2px rgba(0,0,0,0.8);
+    z-index: 1;
+}
+
+.hearts-container {
+    display: flex;
+    gap: 5px;
+}
+
+.hearts-container.small {
+    transform: scale(0.6);
+    transform-origin: top left;
+    height: 20px;
+    margin-bottom: 2px;
+}
+
+.heart-wrapper {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}
+
+.heart-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.heart-bg {
+    fill: #330000;
+    stroke: #550000;
+    stroke-width: 2;
+}
+
+.heart-fill {
+    fill: #ff0000;
+}
+
+.heart-fill-rect {
+    transition: y 0.2s linear;
+}
+
+@keyframes pulse-heart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.heart-pulsing {
+    animation: pulse-heart 1s infinite ease-in-out;
+}
+
+#vs-status-display {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.6);
+    padding: 8px 16px;
+    border-radius: 20px;
+    white-space: nowrap;
+    z-index: 5;
+}
